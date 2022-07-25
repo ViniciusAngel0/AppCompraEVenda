@@ -19,6 +19,7 @@
 		96D5B9C928899A04007B03E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9C828899A04007B03E5 /* LoginViewController.swift */; };
 		96D5B9CF2889A012007B03E5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9CE2889A012007B03E5 /* RegisterView.swift */; };
 		96D5B9D52889D2A8007B03E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9D42889D2A8007B03E5 /* HomeView.swift */; };
+		96DF6A2B288AE4DE0005C5C6 /* BaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF6A2A288AE4DE0005C5C6 /* BaseTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		96D5B9C828899A04007B03E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96D5B9CE2889A012007B03E5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		96D5B9D42889D2A8007B03E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		96DF6A2A288AE4DE0005C5C6 /* BaseTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				96D5B9D42889D2A8007B03E5 /* HomeView.swift */,
+				96DF6A2A288AE4DE0005C5C6 /* BaseTabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				96D5B9D52889D2A8007B03E5 /* HomeView.swift in Sources */,
 				96D5B9C928899A04007B03E5 /* LoginViewController.swift in Sources */,
 				96D5B9C7288999DC007B03E5 /* LoginView.swift in Sources */,
+				96DF6A2B288AE4DE0005C5C6 /* BaseTabBarView.swift in Sources */,
 				962A42942885E78700E17496 /* ViewController.swift in Sources */,
 				962A42902885E78700E17496 /* AppDelegate.swift in Sources */,
 				962A429A2885E78700E17496 /* AppCompraEVenda.xcdatamodeld in Sources */,

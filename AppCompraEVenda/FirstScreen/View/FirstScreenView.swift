@@ -87,8 +87,8 @@ class FirstScreenView: UIViewController {
 
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImage.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: -60),
-            logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            logoImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            logoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            logoImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             
             subTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             subTitleLabel.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 50),

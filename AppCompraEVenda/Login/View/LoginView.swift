@@ -11,6 +11,7 @@ import UIKit
 class LoginView: UIViewController {
     
     let homeView = HomeView()
+    let baseTabBarView = BaseTabBarView()
     
     //MARK:  - ViewElements
     
@@ -115,7 +116,7 @@ class LoginView: UIViewController {
     
     @objc func loginButtonTap() {
         
-        navigationController?.pushViewController(homeView, animated: true)
+        navigationController?.pushViewController(baseTabBarView, animated: true)
         
     }
     
