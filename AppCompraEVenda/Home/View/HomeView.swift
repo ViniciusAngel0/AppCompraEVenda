@@ -10,16 +10,19 @@ import UIKit
 
 class HomeView: UIViewController {
     
+    let noticationView = NotificationView()
+    
     private lazy var subView: UIView = {
         let view = UIView()
         view.addSubview(imageUserImage)
         view.addSubview(nameLabel)
         view.addSubview(cnpjLabel)
-        view.addSubview(notificationImage)
+        view.addSubview(notificationButton)
+        view.addSubview(inBalanceButton)
+        view.addSubview(outBalanceButton)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
     
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
@@ -38,7 +41,6 @@ class HomeView: UIViewController {
         return image
     }()
     
-    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.text = "CC Imports"
@@ -52,7 +54,7 @@ class HomeView: UIViewController {
     
     private lazy var cnpjLabel: UILabel = {
        let label = UILabel()
-        label.text = "123.123.0001-82"
+        label.text = "123.456.0001-89"
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 14)
         label.textColor = .systemGray
@@ -60,18 +62,37 @@ class HomeView: UIViewController {
         return label
     }()
     
-    private lazy var notificationImage: UIImageView = {
-       let image = UIImageView()
-        image.image = .init(systemName: "bell")
-        image.contentMode = .center
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
+    private lazy var notificationButton: UIButton = {
+       let button = UIButton()
+        button.setImage(UIImage(systemName: "bell"), for: .normal)
+        button.contentMode = .center
+        button.addTarget(self, action: #selector(noticationViewTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
+    private lazy var inBalanceButton: UIButton = {
+       let button = UIButton()
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 15
+        button.contentMode = .scaleAspectFill
+        //button.setImage(UIImage(named: "cliente"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var outBalanceButton: UIButton = {
+       let button = UIButton()
+        button.layer.cornerRadius = 15
+        button.backgroundColor = .blue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Home"
         view.addSubview(scrollView)
         view.backgroundColor = .systemBackground
         setupView()
@@ -104,11 +125,29 @@ class HomeView: UIViewController {
             cnpjLabel.leadingAnchor.constraint(equalTo: imageUserImage.trailingAnchor, constant: 10),
             cnpjLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 7),
             
-            notificationImage.trailingAnchor.constraint(equalTo: subView.trailingAnchor, constant: -20),
+            notificationButton.trailingAnchor.constraint(equalTo: subView.trailingAnchor, constant: -20),
             //notificationImage.centerXAnchor.constraint(equalTo: imageUserImage.centerXAnchor),
-            notificationImage.heightAnchor.constraint(equalToConstant: 56.99),
-            notificationImage.widthAnchor.constraint(equalToConstant: 56.99),
+            notificationButton.heightAnchor.constraint(equalToConstant: 56.99),
+            notificationButton.widthAnchor.constraint(equalToConstant: 56.99),
+            
+            inBalanceButton.topAnchor.constraint(equalTo: imageUserImage.bottomAnchor, constant: 20),
+            inBalanceButton.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 20),
+            inBalanceButton.heightAnchor.constraint(equalToConstant: 100),
+            //clientButton.widthAnchor.constraint(equalToConstant: 150),
+            inBalanceButton.trailingAnchor.constraint(equalTo: subView.centerXAnchor, constant: -10),
+            
+            outBalanceButton.topAnchor.constraint(equalTo: imageUserImage.bottomAnchor, constant: 20),
+            outBalanceButton.trailingAnchor.constraint(equalTo: subView.trailingAnchor, constant: -20),
+            outBalanceButton.heightAnchor.constraint(equalToConstant: 100),
+            outBalanceButton.leadingAnchor.constraint(equalTo: subView.centerXAnchor, constant: 10),
             
         ])
     }
+    
+    @objc func noticationViewTapped() {
+        
+        navigationController?.pushViewController(noticationView, animated: true)
+        
+    }
+    
 }

@@ -14,14 +14,18 @@ class BaseTabBarView: UITabBarController {
         super.viewDidLoad()
         
         let homeView = HomeView()
+        let menuView = MenuView()
         
         let hojeVc = UIViewController()
         hojeVc.view.backgroundColor = .red
+        hojeVc.title = "Hoje"
         
         viewControllers = [
         
             homeView,
+            menuView,
             hojeVc,
+            
         
         ]
         
