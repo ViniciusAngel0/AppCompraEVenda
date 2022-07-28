@@ -10,6 +10,8 @@ import UIKit
 
 class ClientView: UIViewController {
     
+    let registerClient = RegisterClient()
+    
     private lazy var registerClientButton: UIButton = {
        let button = UIButton()
         button.layer.cornerRadius = 15
@@ -17,6 +19,7 @@ class ClientView: UIViewController {
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.layer.borderColor = UIColor.red.cgColor
+        button.addTarget(self, action: #selector(registerClientButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -72,5 +75,9 @@ class ClientView: UIViewController {
         
     }
     
-    
+    @objc func registerClientButtonTapped() {
+        
+        navigationController?.pushViewController(registerClient, animated: true)
+        
+    }
 }

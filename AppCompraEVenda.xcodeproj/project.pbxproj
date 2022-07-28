@@ -18,6 +18,7 @@
 		969F8BAB289031EF00BE4082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969F8BAA289031EF00BE4082 /* Assets.xcassets */; };
 		96C2B500289168C30006BCC9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2B4FF289168C30006BCC9 /* MenuView.swift */; };
 		96C2B5062891ABE50006BCC9 /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2B5052891ABE50006BCC9 /* ClientView.swift */; };
+		96C42ACF2892F79000EC142C /* RegisterClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C42ACE2892F79000EC142C /* RegisterClientView.swift */; };
 		96D5B9C7288999DC007B03E5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9C6288999DC007B03E5 /* LoginView.swift */; };
 		96D5B9C928899A04007B03E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9C828899A04007B03E5 /* LoginViewController.swift */; };
 		96D5B9CF2889A012007B03E5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5B9CE2889A012007B03E5 /* RegisterView.swift */; };
@@ -39,6 +40,7 @@
 		969F8BAA289031EF00BE4082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C2B4FF289168C30006BCC9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		96C2B5052891ABE50006BCC9 /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
+		96C42ACE2892F79000EC142C /* RegisterClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterClientView.swift; sourceTree = "<group>"; };
 		96D5B9C6288999DC007B03E5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96D5B9C828899A04007B03E5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96D5B9CE2889A012007B03E5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		96C2B5012891ABA30006BCC9 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				96C42ACC2892F77300EC142C /* RegisterClient */,
 				96C2B5042891ABBD0006BCC9 /* ViewModel */,
 				96C2B5032891ABB70006BCC9 /* View */,
 				96C2B5022891ABB00006BCC9 /* Model */,
@@ -229,6 +232,22 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		96C42ACC2892F77300EC142C /* RegisterClient */ = {
+			isa = PBXGroup;
+			children = (
+				96C42ACD2892F77E00EC142C /* View */,
+			);
+			path = RegisterClient;
+			sourceTree = "<group>";
+		};
+		96C42ACD2892F77E00EC142C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96C42ACE2892F79000EC142C /* RegisterClientView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96D5B9C1288999A7007B03E5 /* Login */ = {
@@ -408,6 +427,7 @@
 				96C2B5062891ABE50006BCC9 /* ClientView.swift in Sources */,
 				96DF6A2B288AE4DE0005C5C6 /* BaseTabBarView.swift in Sources */,
 				962A42942885E78700E17496 /* ViewController.swift in Sources */,
+				96C42ACF2892F79000EC142C /* RegisterClientView.swift in Sources */,
 				962A42902885E78700E17496 /* AppDelegate.swift in Sources */,
 				962A429A2885E78700E17496 /* AppCompraEVenda.xcdatamodeld in Sources */,
 				96D5B9CF2889A012007B03E5 /* RegisterView.swift in Sources */,
