@@ -12,6 +12,7 @@ class LoginView: UIViewController {
     
     let homeView = HomeView()
     let baseTabBarView = BaseTabBarView()
+    let menuView = MenuView()
     
     //MARK:  - ViewElements
     
